@@ -28,6 +28,7 @@ connection.query('SELECT * from produk', (err, rows, fields) => {
 
 connection.end()
 })
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
