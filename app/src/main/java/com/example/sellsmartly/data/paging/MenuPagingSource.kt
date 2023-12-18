@@ -13,13 +13,13 @@ class MenuPagingSource (private val token: String, private val apiService: ApiSe
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, ListMenuItem> {
         return try {
-            val page = params.key ?: INITIAL_PAGE_INDEX
-            val responseData = apiService.getMenu("$token", page, params.loadSize)
+            val name = params.key ?: INITIAL_PAGE_INDEX
+            val responseData = apiService.getMenu("$token", name.toString(), params.loadSize.toDouble())
 
             LoadResult.Page(
                 data = responseData.listMenu,
-                prevKey = if (page == 1) null else page - 1,
-                nextKey = if (responseData.listMenu.isNullOrEmpty()) null else page + 1
+                prevKey = if (name == 1) null else name - 1,
+                nextKey = if (responseData.listMenu.isNullOrEmpty()) null else name + 1
             )
         } catch (exception: Exception) {
             return LoadResult.Error(exception)
