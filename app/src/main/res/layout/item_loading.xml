@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/msgError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        tools:text="Timeout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRetry"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@drawable/gradient"
+        android:text="@string/retry"
+        android:textSize="15dp"
+        android:padding="4dp"
+        android:textColor="@color/black" />
+</LinearLayout>

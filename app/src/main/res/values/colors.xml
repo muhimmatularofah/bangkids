@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hijau_tua">#22811B</color>
+    <color name="hijau_muda">#53F35C</color>
+    <color name="red">#CF212A</color>
+    <color name="gray_100">#F7F8F8</color>
+    <color name="gray_200">#ADA4A5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="white_100">#FFFBFE</color>
+    <color name="lavender">#6F6EF4</color>
+</resources>

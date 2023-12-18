@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sellsmartly.ui.fragment.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.sellsmartly.ui.fragment.purchase.PurchaseFragment"
+        android:label="purchase"
+        tools:layout="@layout/fragment_purchase" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.sellsmartly.ui.fragment.menu.MenuFragment"
+        android:label="menu"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.sellsmartly.ui.fragment.cart.CartFragment"
+        android:label="cart"
+        tools:layout="@layout/fragment_cart" >
+    </fragment>
+</navigation>
