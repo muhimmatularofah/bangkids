@@ -1,34 +1,23 @@
+require("dotenv").config()
 const express = require('express')
 const app = express()
-const port = 3000
-const mysql = require('mysql')
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '123Keren',
-  database: 'sellsmartly'
-})
-app.get('/kategori', (req, res) => {
-  connection.connect()
+const userRouter = require("./src/routes")
+// const pool = require("./src/config/database");
 
-connection.query('SELECT * from kategori', (err, rows, fields) => {
-  if (err) throw err
-  res.send(rows)
-})
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(userRouter);
 
-connection.end()
-})
-app.get('/produk', (req, res) => {
-  connection.connect()
+app.get("/sell", (req, res) => {
+    res.json({
+        success: 1,
+        message: "This is rest Api"
+    });
+});
 
-connection.query('SELECT * from produk', (err, rows, fields) => {
-  if (err) throw err
-  res.send(rows)
-})
-
-connection.end()
-})
+app.listen
+const port = 8000
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App running on port ${port}`)
 })
